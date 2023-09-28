@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Submit a new product</h1>
-<form method="post" th:action="@{/add}" th:object="${products}">
+<form method="post" th:action="@{'/edit/' + ${product.id}}" th:object="${product}">
     <label>
         <input required th:field="*{name}" th:type="text">
     </label>
@@ -22,7 +22,7 @@
     <label>
         <input th:field="*{eanCode}" th:type="text">
     </label>
-    <input type="submit" value="Submit"/>
+    <input type="submit" value="Edit"/>
 </form>
 </body>
 </html>
