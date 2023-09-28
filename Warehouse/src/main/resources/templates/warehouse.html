@@ -8,6 +8,7 @@
 <body>
 <table class="table" th:fragment="table">
     <thead th:fragment="thead">
+    <a href="http://localhost:8080/add">Add new product</a>
     <th>Name</th>
     <th>Description</th>
     <th>Price</th>
@@ -18,7 +19,7 @@
     <tr th:Object="${product}" th:each="product : ${products}">
         <td class="name" th:text="*{getName()}">Name</td>
         <td class="description" th:text="*{getDescription()}">Description</td>
-        <td class="price" th:text="${product.getPrice() + ' ' + product.getCurrency()}">Price</td>
+        <td class="price" th:text="${product.getPrice() + product.getCurrency()}">Price</td>
         <td class="quantity" th:text="*{getStock()}">Quantity</td>
         <td class="quantity" th:text="*{getEanCode()}">Quantity</td>
     </tr>
