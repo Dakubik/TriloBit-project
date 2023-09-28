@@ -20,7 +20,7 @@ public class ProductController {
     public String getWarehouse(Model model) {
 
         Iterable<Product> products = productRepository.findAll();
-        model.addAttribute("product", products);
+        model.addAttribute("products", products);
 
         return "warehouse";
     }

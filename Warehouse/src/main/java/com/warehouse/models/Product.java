@@ -17,8 +17,9 @@ public class Product {
     @Id
     private Long id;
     private String name;
-    private Long stock;
     private String description;
     private Long price;
+    private String currency = "€";
+    private Long stock;
     private Long eanCode;
 }
