@@ -6,21 +6,21 @@
 </head>
 <body>
 <h1>Submit a new product</h1>
-<form method="post" th:action="@{/add}">
+<form method="post" th:action="@{/add}" th:object="${products}">
     <label>
-        <input th:field="${products.name}" th:label="Name" th:type="text">
+        <input th:field="*{name}" th:type="text">
     </label>
     <label>
-        <input th:field="${products.description}" th:label="Description" th:type="text">
+        <input th:field="*{description}" th:type="text">
     </label>
     <label>
-        <input th:field="${products.price}" th:label="Price" th:type="text">
+        <input th:field="*{price}" th:type="text">
     </label>
     <label>
-        <input th:field="${products.stock}" th:label="Quantity" th:type="number">
+        <input th:field="*{stock}" th:type="number">
     </label>
     <label>
-        <input th:field="${products.eanCode}" th:label="EAN Code" th:type="number">
+        <input th:field="*{eanCode}" th:type="text">
     </label>
     <input type="submit" value="Submit"/>
 </form>
