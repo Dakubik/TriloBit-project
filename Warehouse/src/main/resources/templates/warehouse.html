@@ -26,7 +26,7 @@
         <tr th:each="product : ${products}">
             <td th:text="${product.getName()}">Name</td>
             <td th:text="${product.getDescription()}">Description</td>
-            <td th:text="${product.getPrice()} + ' ' + ${product.getCurrency()}"></td>
+            <td th:text="${product.getPrice()} + ' ' + ${product.getCurrency()}">Price</td>
             <td th:text="${product.getStock()}">Quantity</td>
             <td th:text="${product.getEanCode()}">EAN Code</td>
             <td>

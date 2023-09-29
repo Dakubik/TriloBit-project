@@ -7,3 +7,10 @@ td, thead {
     vertical-align: middle;
 }
 
+td:nth-child(3) {
+    white-space: nowrap;
+}
+
+td:nth-child(3) span.currency {
+    font-weight: bold;
+}
