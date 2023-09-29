@@ -1,0 +1,7 @@
+.table-data, .table-head {
+    font-size: 18px;
+}
+
+td, thead {
+    text-align: center;
+}
