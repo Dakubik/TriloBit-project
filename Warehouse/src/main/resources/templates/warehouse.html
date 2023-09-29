@@ -26,7 +26,7 @@
         <tr th:each="product : ${products}">
             <td th:text="${product.getName()}">Name</td>
             <td th:text="${product.getDescription()}">Description</td>
-            <td th:text="${product.getPrice()} + ' ' + ${product.getCurrency()}">Price</td>
+            <td th:text="${product.getPrice()} + ' ' + ${product.getCurrency()}"></td>
             <td th:text="${product.getStock()}">Quantity</td>
             <td th:text="${product.getEanCode()}">EAN Code</td>
             <td>
@@ -36,7 +36,8 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" th:href="@{'/edit/' + ${product.id}}">Edit</a></li>
-                        <li><a class="dropdown-item" th:href="@{'/delete/' + ${product.id}}">Delete</a></li>
+                        <li><a class="dropdown-item" th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                        </li>
                     </ul>
                 </div>
             </td>

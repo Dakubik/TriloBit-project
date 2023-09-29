@@ -4,4 +4,6 @@
 
 td, thead {
     text-align: center;
+    vertical-align: middle;
 }
+

@@ -75,4 +75,14 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/delete/{productId}")
+    public String deleteProduct(@PathVariable Long productId) {
+        Product product = productRepository.findById(productId).orElse(null);
+
+        assert product != null;
+        productRepository.delete(product);
+
+        return "redirect:/warehouse";
+    }
+
 }
