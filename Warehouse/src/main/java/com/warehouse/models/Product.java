@@ -1,8 +1,6 @@
 package com.warehouse.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,7 +12,12 @@ import lombok.Setter;
 public class Product {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "user_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(
+            name = "user_id_seq",
+            sequenceName = "user_id_seq",
+            allocationSize = 1
+    )
     private Long id;
     private String name;
     private String description;
